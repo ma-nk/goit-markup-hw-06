@@ -210,6 +210,16 @@ a:visited {
   margin: 0 auto;
 }
 
+@media (min-resolution: 2dppx) {
+  .preview {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero_img@2x.jpg);
+  }
+}
+
 .preview-title {
   font-size: 56px;
   font-weight: 700;
