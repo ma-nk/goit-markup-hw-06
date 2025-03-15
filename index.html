@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HTML+CSS HW1</title>
+    <title>WebStudio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -94,8 +94,8 @@
               </div>
               <h3 class="plan-title">Diligence</h3>
               <p class="plan-content">
-                Research and confirm brands with the strongest digital growth
-                opportunities and minimize risk.
+                Research and confirm brands that present the strongest digital
+                growth opportunities and minimize risk.
               </p>
             </li>
             <li class="plans-menu-item">
@@ -115,17 +115,13 @@
       </section>
       <section class="team">
         <div class="container">
-          <h2 class="team-title">Our Team</h2>
+          <h2 class="team-title-main">Our Team</h2>
           <ul class="team-menu">
             <li class="team-item">
-              <img
-                src="./images/img_mark.jpg"
-                alt="Mark's Avatar"
-                width="264"
-              />
-              <div class="ti-container">
-                <h3 class="ti-header">Mark Guerrero</h3>
-                <p class="ti-title">Product Designer</p>
+              <img src="./images/mark.jpg" alt="Mark's Avatar" width="264" />
+              <div class="team-container">
+                <h3 class="team-header">Mark Guerrero</h3>
+                <p class="team-title">Product Designer</p>
                 <ul class="social-list">
                   <li class="social-item">
                     <a href="#" class="social-link">
@@ -159,10 +155,10 @@
               </div>
             </li>
             <li class="team-item">
-              <img src="./images/img_tom.jpg" alt="Tom's Avatar" width="264" />
-              <div class="ti-container">
-                <h3 class="ti-header">Tom Ford</h3>
-                <p class="ti-title">Frontend Developer</p>
+              <img src="./images/tom.jpg" alt="Tom's Avatar" width="264" />
+              <div class="team-container">
+                <h3 class="team-header">Tom Ford</h3>
+                <p class="team-title">Frontend Developer</p>
                 <ul class="social-list">
                   <li class="social-item">
                     <a href="#" class="social-link">
@@ -197,13 +193,13 @@
             </li>
             <li class="team-item">
               <img
-                src="./images/img_camilla.jpg"
+                src="./images/camilla.jpg"
                 alt="Camila's Avatar"
                 width="264"
               />
-              <div class="ti-container">
-                <h3 class="ti-header">Camila Garcia</h3>
-                <p class="ti-title">Marketing</p>
+              <div class="team-container">
+                <h3 class="team-header">Camila Garcia</h3>
+                <p class="team-title">Marketing</p>
                 <ul class="social-list">
                   <li class="social-item">
                     <a href="#" class="social-link">
@@ -238,13 +234,13 @@
             </li>
             <li class="team-item">
               <img
-                src="./images/img_daniel.jpg"
+                src="./images/daniel.jpg"
                 alt="Daniel's Avatar"
                 width="264"
               />
-              <div class="ti-container">
-                <h3 class="ti-header">Daniel Wilson</h3>
-                <p class="ti-title">UI Designer</p>
+              <div class="team-container">
+                <h3 class="team-header">Daniel Wilson</h3>
+                <p class="team-title">UI Designer</p>
                 <ul class="social-list">
                   <li class="social-item">
                     <a href="#" class="social-link">
@@ -287,7 +283,7 @@
             <li class="pm-item">
               <div class="pm-image-block">
                 <img
-                  src="./images/img_bank.jpg"
+                  src="./images/bank.jpg"
                   alt="Banking"
                   width="360"
                   height="300"
@@ -306,7 +302,7 @@
             <li class="pm-item">
               <div class="pm-image-block">
                 <img
-                  src="./images/img_cashless.jpg"
+                  src="./images/cashless.jpg"
                   alt="Cashless Payment"
                   width="360"
                   height="300"
@@ -325,7 +321,7 @@
             <li class="pm-item">
               <div class="pm-image-block">
                 <img
-                  src="./images/img_meditation.jpg"
+                  src="./images/meditation.jpg"
                   alt="Meditation"
                   width="360"
                   height="300"
@@ -344,7 +340,7 @@
             <li class="pm-item">
               <div class="pm-image-block">
                 <img
-                  src="./images/img_taxi.jpg"
+                  src="./images/taxi.jpg"
                   alt="Taxi"
                   width="360"
                   height="300"
@@ -363,7 +359,7 @@
             <li class="pm-item">
               <div class="pm-image-block">
                 <img
-                  src="./images/img_screen.jpg"
+                  src="./images/screen.jpg"
                   alt="Screen Illustrations"
                   width="360"
                   height="300"
@@ -382,7 +378,7 @@
             <li class="pm-item">
               <div class="pm-image-block">
                 <img
-                  src="./images/img_courses.jpg"
+                  src="./images/courses.jpg"
                   alt="Online Courses"
                   width="360"
                   height="300"
@@ -467,7 +463,7 @@
         </div>
       </div>
     </footer>
-    <div class="modal-overlay">
+    <div class="modal-overlay is-open">
       <div class="modal">
         <button class="modal-close-button" type="button">
           <svg class="modal-close-icon" width="8" height="8">
@@ -544,10 +540,8 @@
                   <use href="./images/icons.svg#icon-check"></use>
                 </svg>
               </span>
-              <span>
-                I accept the terms and conditions of the
-                <a href="" class="modal-checkbox-link">Privacy Policy</a>
-              </span>
+              I accept the terms and conditions of the
+              <a href="" class="modal-checkbox-link">Privacy Policy</a>
             </label>
           </div>
           <button class="modal-button" type="submit">Send</button>
