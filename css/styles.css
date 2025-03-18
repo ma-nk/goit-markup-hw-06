@@ -28,7 +28,7 @@ img {
 }
 
 .container {
-  max-width: 1158px;
+  max-width: 767px;
   width: 100%;
   padding: 0 15px;
   margin: 0 auto;
@@ -117,6 +117,12 @@ a:visited {
   gap: 40px;
 }
 
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+}
+
 .nav-item:nth-child(1) .nav-link {
   color: #404bbf;
   position: relative;
@@ -179,6 +185,19 @@ a:visited {
   line-height: 1.5;
   letter-spacing: 0.02em;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (max-width: 1158px) {
+  .address-link {
+    font-size: 14px;
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .address-link {
+    display: none;
+  }
 }
 
 .address-link:hover {
@@ -319,6 +338,12 @@ a:visited {
   }
 }
 
+@media (max-width: 768px) {
+  .pm-icon-container {
+    display: none;
+  }
+}
+
 .plan-title {
   display: block;
   color: #2e2f42;
@@ -379,6 +404,10 @@ a:visited {
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.team-item img {
+  width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -502,24 +531,25 @@ a:visited {
   flex-direction: column;
   align-items: center;
   box-sizing: border-box; /* Prevents overflow issues */
-  flex: 100%;
+  /* flex: 100%; */
+  flex-basis: 100%;
 }
 
 @media (min-width: 768px) {
   .pm-item {
-    flex-basis: calc(50% - 12px); /* 2 columns on tablet */
+    flex-basis: calc((100% - 24px) / 3);
   }
 }
 
 @media (min-width: 1158px) {
   .pm-item {
-    flex-basis: calc(33.33% - 16px); /* 3 columns on desktop */
+    flex-basis: calc((100% - 3 * 24px) / 4);
   }
 }
 
 /* Ensure images don't overflow */
 .pm-image-block {
-  /* flex: 100%; Adjust to container */
+  flex: 100%;
   /* max-width: 360px; */
   position: relative;
   overflow: hidden;
@@ -1186,7 +1216,7 @@ a:visited {
   }
 
   .header {
-    height: 72px;
+    padding: 24px 0;
   }
 
   .nav-menu {
@@ -1288,44 +1318,118 @@ a:visited {
     gap: 40px;
   }
 
-  .preview {
-    height: 100vh;
-  }
-
   .plans {
     padding: 120px 156px;
   }
 
   .footer {
-    height: 312px;
     padding: 100px 0;
   }
 
   .footer-container {
-    justify-content: start;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
   }
 
   .footer-info {
-    margin-right: 120px;
+    flex: 1;
+  }
+
+  .footer-social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    margin: 0 auto;
   }
 
   .footer-input {
-    margin-left: 120px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex: 1; /* Ensures it takes available space */
+    justify-content: flex-end; /* Pushes it to the right */
+    margin-left: auto;
+  }
+
+  .footer-input-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
   }
 }
 
 /* Проміжок між планшетом і десктопом */
 @media (min-width: 768px) and (max-width: 1157px) {
-  .preview {
-    height: 500px;
-  }
-
   .plans {
     padding: 80px 100px;
   }
 
+  .pm-icon-container {
+    display: none;
+  }
+
   .footer-container {
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .footer-content {
+    flex: 1;
+  }
+
+  .footer-social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex: 1;
+  }
+
+  .footer-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+  }
+
+  .footer-info,
+  .footer-social,
+  .footer-input,
+  .footer-input-title {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-email-input {
+    width: 100%;
+  }
+
+  .footer-input input {
+    text-align: center;
   }
 }
