@@ -30,7 +30,6 @@ img {
 .container {
   max-width: 767px;
   width: 100%;
-  padding: 0 15px;
   margin: 0 auto;
 }
 
@@ -55,12 +54,10 @@ img {
 }
 
 .header-container {
-  height: 100%;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  flex-direction: row;
+  max-width: none;
 }
 
 a,
@@ -78,7 +75,6 @@ button {
 }
 
 .header-navigation {
-  width: 50%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -119,7 +115,16 @@ a:visited {
 
 @media (max-width: 768px) {
   .nav-menu {
-    display: none;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(100%);
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+    white-space: nowrap;
   }
 }
 
@@ -158,16 +163,6 @@ a:visited {
   color: #404bbf;
 }
 
-.header-address {
-  font-style: normal;
-  width: 50%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-
 .address-menu {
   text-decoration: none;
   display: flex;
@@ -190,13 +185,21 @@ a:visited {
 @media (max-width: 1158px) {
   .address-link {
     font-size: 14px;
-    display: none;
   }
 }
 
 @media (max-width: 768px) {
   .address-link {
-    display: none;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(100%);
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+    white-space: nowrap;
   }
 }
 
@@ -259,6 +262,8 @@ a:visited {
   position: relative;
   z-index: 1;
   margin: 0 auto;
+  letter-spacing: 1.12px;
+  line-height: 60px;
 }
 
 .order-button {
@@ -346,8 +351,8 @@ a:visited {
   display: block;
   color: #2e2f42;
   font-size: 20px;
+  line-height: 24px;
   font-weight: 500;
-  line-height: 1.2;
   letter-spacing: 0.02em;
   margin-bottom: 8px;
 }
@@ -392,16 +397,15 @@ a:visited {
 }
 
 .team-item {
-  flex-basis: 100%; /* Full width on small screens */
   background-color: #ffffff;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
   flex-direction: column;
-  border-radius: 0px 0px 4px 4px;
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+  max-width: 264px;
+  max-height: 428px;
 }
 
 .team-item img {
@@ -528,17 +532,20 @@ a:visited {
   flex-direction: column;
   align-items: center;
   box-sizing: border-box;
+  max-height: 400px;
 }
 
 @media (min-width: 768px) {
   .pm-item {
-    flex-basis: calc((100% - 24px) / 3);
+    flex-basis: calc((100% - 24px) / 2);
+    max-height: 420px;
   }
 }
 
 @media (min-width: 1158px) {
   .pm-item {
-    flex-basis: calc((100% - 3 * 24px) / 4);
+    flex-basis: calc((100% - 48px) / 3);
+    max-height: 420px;
   }
 }
 
@@ -567,6 +574,7 @@ a:visited {
 
 .pm-container {
   width: 100%;
+  max-width: 360px;
   border-width: 0px, 1px, 1px, 1px;
   border: 1px solid #e7e9fc;
   border-top: none;
@@ -1202,8 +1210,9 @@ a:visited {
   .container {
     max-width: 768px;
   }
-  .header {
-    padding: 24px 0;
+
+  .header-container {
+    width: 100%;
   }
 
   .nav-menu {
@@ -1240,12 +1249,6 @@ a:visited {
     margin-left: 122px;
   }
 
-  .preview-title {
-    font-size: 56px;
-    text-align: center;
-    line-height: 1.07;
-  }
-
   .plans {
     padding: 96px 0;
   }
@@ -1256,14 +1259,11 @@ a:visited {
 
   .portfolio-menu {
     flex-wrap: wrap;
-    gap: 72px;
   }
 
   .footer-container {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 24px;
-    padding: 0 108px;
   }
 
   .footer-info {
@@ -1289,6 +1289,7 @@ a:visited {
 @media (min-width: 1158px) {
   .container {
     max-width: 1158px;
+    padding: 0 16px;
   }
   .header-navigation {
     justify-content: space-around;
@@ -1315,23 +1316,20 @@ a:visited {
   }
 
   .footer-info {
-    flex: 1;
+    width: 264px;
   }
 
   .footer-social {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    flex: 1;
-    margin: 0 auto;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-left: 120px;
   }
 
   .footer-input {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex: 1; /* Ensures it takes available space */
+    flex-direction: column;
+    /* align-items: center; */
     justify-content: flex-end; /* Pushes it to the right */
     margin-left: auto;
   }
@@ -1346,6 +1344,10 @@ a:visited {
 
 /* Проміжок між планшетом і десктопом */
 @media (min-width: 768px) and (max-width: 1157px) {
+  .header-container {
+    width: 100%;
+  }
+
   .plans {
     padding: 80px 100px;
   }
@@ -1356,13 +1358,17 @@ a:visited {
 
   .footer-container {
     display: flex;
-    /* flex-direction: column; */
-    align-items: center;
     width: 100%;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
     gap: 20px;
+  }
+
+  .plan-title {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .plans-menu-item {
+    max-width: 356px;
   }
 
   .footer-content {
@@ -1371,28 +1377,62 @@ a:visited {
 
   .footer-social {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
     flex-wrap: wrap;
-    flex: 1;
+    flex-direction: column;
+    margin-left: 120px;
   }
 
   .footer-input {
     display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 72px;
+    margin-left: 108px;
+    align-items: start; /* Center horizontally */
   }
 }
 
 @media (max-width: 768px) {
-  .footer-container {
+  .menu-icon {
+    position: absolute;
+    right: 20px; /* Adjust as needed */
+    transform: translateY(-50%);
+    top: 20px;
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 8px;
+  }
+
+  .header-container .is-open {
+    padding: 0 16px;
+    padding: 8px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .plans-menu-item {
+    max-width: 288px;
+  }
+
+  .plan-title {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .footer-container {
+    justify-content: center;
     align-items: center;
-    text-align: center;
+    flex-wrap: wrap;
+    gap: 72px 24px;
+  }
+
+  .footer-input-container {
+    flex-direction: column;
   }
 
   .footer-info,
@@ -1407,7 +1447,7 @@ a:visited {
   }
 
   .footer-email-input {
-    width: 100%;
+    max-width: 100%;
   }
 
   .footer-input input {
