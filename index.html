@@ -122,6 +122,7 @@
           <ul class="team-menu">
             <li class="team-item">
               <img
+                src=""
                 srcset="./images/mark.jpg 1x, ./images/mark@2x.jpg 2x"
                 alt="Mark's Avatar"
               />
@@ -162,6 +163,7 @@
             </li>
             <li class="team-item">
               <img
+                src=""
                 srcset="./images/tom.jpg 1x, ./images/tom@2x.jpg 2x"
                 alt="Tom's Avatar"
               />
@@ -202,6 +204,7 @@
             </li>
             <li class="team-item">
               <img
+                src=""
                 srcset="./images/camilla.jpg 1x, ./images/camilla@2x.jpg 2x"
                 alt="Camila's Avatar"
               />
@@ -242,6 +245,7 @@
             </li>
             <li class="team-item">
               <img
+                src=""
                 srcset="./images/daniel.jpg 1x, ./images/daniel@2x.jpg 2x"
                 alt="Daniel's Avatar"
               />
@@ -416,7 +420,10 @@
                     "
                     media="(min-width: 768px)" />
                   <source
-                    src="./images/taxi-service-mob.jpg 1x, ./images/taxi-service-mob@2x.jpg 2x"
+                    srcset="
+                      ./images/taxi-service-mob.jpg    1x,
+                      ./images/taxi-service-mob@2x.jpg 2x
+                    "
                     media="(max-width: 767px)" />
                   <img src="./images/taxi-service-mob.jpg" alt="taxi-service"
                 /></picture>
@@ -487,7 +494,7 @@
                       ./images/online-courses-mob.jpg    1x,
                       ./images/online-courses-mob@2x.jpg 2x
                     "
-                    media="max-width: 767px" />
+                    media="(max-width:767px)" />
                   <img
                     src="./images/online-courses-mob.jpg"
                     alt="online-courses"
@@ -561,7 +568,7 @@
                 class="footer-email-input"
                 placeholder="E-mail"
                 id="email-input"
-            /></label>
+            ></label>
             <button class="footer-input-button" type="submit">
               Subscribe
               <svg class="footer-send-icon" width="24" height="24">
@@ -590,7 +597,7 @@
                 class="modal-input"
                 name="user-name"
                 required
-              />
+              >
               <svg class="modal-input-icon" width="18" height="24">
                 <use href="./images/icons.svg#icon-username"></use>
               </svg>
@@ -605,7 +612,7 @@
                 class="modal-input"
                 name="phone"
                 required
-              />
+              >
               <svg class="modal-input-icon" width="18" height="24">
                 <use href="./images/icons.svg#icon-phone"></use>
               </svg>
@@ -620,7 +627,7 @@
                 class="modal-input"
                 name="email"
                 required
-              />
+              >
               <svg class="modal-input-icon" width="18" height="24">
                 <use href="./images/icons.svg#icon-email"></use>
               </svg>
@@ -642,7 +649,7 @@
               id="user-privacy"
               class="modal-checkbox-input visually-hidden"
               value="true"
-            />
+            >
             <label for="user-privacy" class="modal-checkbox-label">
               <span class="modal-checkbox">
                 <svg width="10" height="8" class="modal-checked-svg">
@@ -713,3 +720,4 @@
     </div>
   </body>
 </html>
+
